@@ -1,30 +1,30 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1735028406
+::res://::1735031265
 AirBar.tscn::PackedScene::1463002735122639288::1726897941::0::1::::<><>::uid://ckaq0qjdekaue::::res://sprites/водабарпуст.png<>uid://dosbaiqmtkumu::::res://sprites/водабарфул.png<>uid://cpglw1vo0b5kr::::res://Comic Sans MS Pixel.ttf<>res://Scripts/BarText.gd
 BACKTO1982.TTF::FontFile::1891217146520616470::1726897942::1727268298::1::::<><>::
 Blox2.ttf::FontFile::6523257090724779372::1726897942::1727268298::1::::<><>::
 camera.gd::GDScript::-1::1726897942::0::1::::<>Camera2D<>::
 Comic Sans MS Pixel.ttf::FontFile::5838768861584960501::1726897942::1727268298::1::::<><>::
-cursor.gd::GDScript::-1::1735022874::0::1::::<>Node2D<>::
-DayCycle.gd::GDScript::-1::1735022874::0::1::::<>Node2D<>::
-day_moludate.tscn::PackedScene::5208560297078343161::1735023618::0::1::::<><>::res://DayCycle.gd<>uid://05ow5q6x4q0e::::res://gradient.tres
+cursor.gd::GDScript::-1::1735030226::0::1::::<>Node2D<>::
+DayCycle.gd::GDScript::-1::1735030226::0::1::::<>Node2D<>::
+day_moludate.tscn::PackedScene::5208560297078343161::1735030242::0::1::::<><>::res://DayCycle.gd<>uid://05ow5q6x4q0e::::res://gradient.tres
 export_presets.cfg::TextFile::-1::1727274413::0::1::::<><>::
-gaiser.gd::GDScript::-1::1735022874::0::1::::<>StaticBody2D<>::
-gaiser.tscn::PackedScene::8772385358833089036::1735023618::0::1::::<><>::res://gaiser.gd<>uid://dh7oxl0exk1vo::::res://sprites/гейзер.png<>uid://dn7qklms810gu::::res://sprites/дымооок.png
+gaiser.gd::GDScript::-1::1735030226::0::1::::<>StaticBody2D<>::
+gaiser.tscn::PackedScene::8772385358833089036::1735030241::0::1::::<><>::res://gaiser.gd<>uid://dh7oxl0exk1vo::::res://sprites/гейзер.png<>uid://dn7qklms810gu::::res://sprites/дымооок.png
 gaiser_revers.gd::GDScript::-1::1726897942::0::1::::<>StaticBody2D<>::
-gaiser_revers.tscn::PackedScene::5186666567410640532::1735023618::0::1::::<><>::res://gaiser.gd<>uid://dlbrtra35kfai::::res://sprites/всасыватель.png<>uid://dn7qklms810gu::::res://sprites/дымооок.png
-gradient.tres::GradientTexture1D::1817543350795009102::1735019458::0::1::::<><>::
-ground_tiles.gd::GDScript::-1::1735022874::0::1::::<>TileMapLayer<>::
+gaiser_revers.tscn::PackedScene::5186666567410640532::1735030241::0::1::::<><>::res://gaiser.gd<>uid://dlbrtra35kfai::::res://sprites/всасыватель.png<>uid://dn7qklms810gu::::res://sprites/дымооок.png
+gradient.tres::GradientTexture1D::1817543350795009102::1735028562::0::1::::<><>::
+ground_tiles.gd::GDScript::-1::1735030227::0::1::::<>TileMapLayer<>::
 icon.svg::CompressedTexture2D::7612625167218809071::1726897942::1727268298::1::::<><>::
-inventoryRound.gd::GDScript::-1::1735022874::0::1::::<>Control<>::
-InventoryRound.tscn::PackedScene::3627758509004425798::1735023619::0::1::::<><>::res://inventoryRound.gd<>uid://cpmbkqmbcn78s::::res://Scenes/texture_rect.tscn
-level.tscn::PackedScene::2758022064450229993::1735023618::0::1::::<><>::uid://c8vibsrfymwb4::::res://sprites/алл2.png<>uid://dt5biku5h7f16::::res://sprites/жидкость.png<>uid://dd3f72u33jyh2::::res://Scenes/player.tscn<>uid://lakva8dh4mqg::::res://Scenes/hpBar.tscn<>uid://c24iwp0cokf4v::::res://Scenes/slime.tscn<>uid://itk7geyax107::::res://resources/PlayerInventory.tres<>uid://u3xpae4g64y3::::res://AirBar.tscn<>uid://d4else4nqlepx::::res://Scenes/inventory_ui.tscn<>uid://b3fmavvlnsk76::::res://Scenes/rock_pic.tscn<>uid://dhyfqqu7r3l6p::::res://Scenes/wagon1.tscn<>uid://bjjyad8ic7rah::::res://sprites/R.jpg<>uid://dhrfatvhj2yuh::::res://Scenes/wagon2.tscn<>res://ui.gd<>uid://dh0xtmoy6vpg6::::res://sprites/ParallaxBackground/1.png<>uid://cxl3xbt7tlf71::::res://sprites/ParallaxBackground/2.png<>uid://b4bhxay14pq8g::::res://sprites/БУГАГАШЕНЬКА.png<>uid://df7s6752scqb3::::res://sprites/ParallaxBackground/3.png<>uid://7ay8b8yoewnj::::res://sprites/ParallaxBackground/4.png<>uid://dw8n51n6i6sue::::res://gaiser.tscn<>uid://cf5pv1rrf3rq7::::res://gaiser_revers.tscn<>uid://byb41gitrfd6s::::res://Scenes/cursor.tscn<>uid://bv2mprjoomcqj::::res://Scenes/cotel.tscn
+inventoryRound.gd::GDScript::-1::1735030227::0::1::::<>Control<>::
+InventoryRound.tscn::PackedScene::3627758509004425798::1735030242::0::1::::<><>::res://inventoryRound.gd<>uid://cpmbkqmbcn78s::::res://Scenes/texture_rect.tscn
+level.tscn::PackedScene::2758022064450229993::1735030241::0::1::::<><>::uid://c8vibsrfymwb4::::res://sprites/алл2.png<>uid://dt5biku5h7f16::::res://sprites/жидкость.png<>uid://dd3f72u33jyh2::::res://Scenes/player.tscn<>uid://lakva8dh4mqg::::res://Scenes/hpBar.tscn<>uid://c24iwp0cokf4v::::res://Scenes/slime.tscn<>uid://itk7geyax107::::res://resources/PlayerInventory.tres<>uid://u3xpae4g64y3::::res://AirBar.tscn<>uid://d4else4nqlepx::::res://Scenes/inventory_ui.tscn<>uid://b3fmavvlnsk76::::res://Scenes/rock_pic.tscn<>uid://dhyfqqu7r3l6p::::res://Scenes/wagon1.tscn<>uid://bjjyad8ic7rah::::res://sprites/R.jpg<>uid://dhrfatvhj2yuh::::res://Scenes/wagon2.tscn<>res://ui.gd<>uid://dh0xtmoy6vpg6::::res://sprites/ParallaxBackground/1.png<>uid://cxl3xbt7tlf71::::res://sprites/ParallaxBackground/2.png<>uid://b4bhxay14pq8g::::res://sprites/БУГАГАШЕНЬКА.png<>uid://df7s6752scqb3::::res://sprites/ParallaxBackground/3.png<>uid://7ay8b8yoewnj::::res://sprites/ParallaxBackground/4.png<>uid://dw8n51n6i6sue::::res://gaiser.tscn<>uid://cf5pv1rrf3rq7::::res://gaiser_revers.tscn<>uid://byb41gitrfd6s::::res://Scenes/cursor.tscn<>uid://bv2mprjoomcqj::::res://Scenes/cotel.tscn
 README.md::TextFile::-1::1735014226::0::1::::<><>::
 rigid_body_2d.gd::GDScript::-1::1735017759::0::1::::<>RigidBody2D<>::
-slime.gd::GDScript::-1::1735028343::0::1::::<>RigidBody2D<>::
-texture_rect.gd::GDScript::-1::1735022875::0::1::::<>TextureRect<>::
+slime.gd::GDScript::-1::1735030228::0::1::::<>RigidBody2D<>::
+texture_rect.gd::GDScript::-1::1735030228::0::1::::<>TextureRect<>::
 Tyche.ttf::FontFile::3403826999616440302::1726897942::1727268298::1::::<><>::
-ui.gd::GDScript::-1::1735022875::0::1::::<>CanvasLayer<>::
+ui.gd::GDScript::-1::1735030228::0::1::::<>CanvasLayer<>::
 Заглавная (Игрушечное Веселье).mp3::AudioStreamMP3::4832345706412946487::1726897943::1727268298::1::::<><>::
 ::res://addons/::1735019836
 ::res://addons/godot-rapier2d/::1735019851
@@ -43,52 +43,52 @@ rapier_state_2d.gd::GDScript::-1::1735019836::0::1::::Rapier2DState<>Node<>res:/
 THIRDPARTY.txt::TextFile::-1::1735019836::0::1::::<><>::
 water_shader.gdshader::Shader::-1::1735019836::0::1::::<><>::
 water_shader.tres::ShaderMaterial::6495341302912672044::1735019836::0::1::::<><>::res://addons/godot-rapier2d/water_shader.gdshader
-::res://addons/godot-rapier2d/bin/::1735028389
+::res://addons/godot-rapier2d/bin/::1735031252
 ::res://addons/godot-rapier2d/bin/libgodot_rapier.ios.framework/::1735019836
 ::res://addons/godot-rapier2d/bin/libgodot_rapier.macos.framework/::1735019836
 ::res://addons/godot-rapier2d/bin/libgodot_rapier.macos.framework/_CodeSignature/::1735019836
 ::res://addons/godot-rapier2d/bin/libgodot_rapier.macos.framework/Resources/::1735019836
 ::res://addons/godot-rapier2d/bin/wasm-nothreads/::1735019836
-::res://resources/::1735019458
+::res://resources/::1735028562
 cummon_slime.tres::Resource/EnemyStats::4717403667712204306::1726897967::0::1::::<><>::res://Scripts/resources/enemyStats.gd
-PlayerInventory.tres::Resource/Inventory::601398564174719762::1735019458::0::1::::<><>::res://Scripts/resources/InventorySlot.gd<>res://Scripts/resources/Inventory.gd
+PlayerInventory.tres::Resource/Inventory::601398564174719762::1735028562::0::1::::<><>::res://Scripts/resources/InventorySlot.gd<>res://Scripts/resources/Inventory.gd
 playerStats.tres::Resource/PlayerStats::1305769865608734363::1726897967::0::1::::<><>::res://Scripts/resources/PlayerStats.gd
 ::res://resources/items/::1728060642
 rock.tres::Resource/InvItem::3891270570349895788::1726897967::0::1::::<><>::res://Scripts/resources/InvItem.gd<>uid://c03miwkbxoxrd::::res://sprites/булыга.png
-::res://Scenes/::1735023619
-cotel.tscn::PackedScene::3916880897728637425::1735023618::0::1::::<><>::uid://brbvyy7chjox0::::res://sprites/котел1левел.png<>uid://c3hmgs4wutl2e::::res://Scenes/MercLight.tscn
-cursor.tscn::PackedScene::4074824860576420820::1735023618::0::1::::<><>::res://cursor.gd<>uid://cxpcv1ic88r0n::::res://sprites/курсор.png
-floating_text.gd::GDScript::-1::1735023010::0::1::::<>Node2D<>::
-floating_text.tscn::PackedScene::4585256725653548124::1735023619::0::1::::<><>::
+::res://Scenes/::1735030243
+cotel.tscn::PackedScene::3916880897728637425::1735030241::0::1::::<><>::uid://brbvyy7chjox0::::res://sprites/котел1левел.png<>uid://c3hmgs4wutl2e::::res://Scenes/MercLight.tscn
+cursor.tscn::PackedScene::4074824860576420820::1735030242::0::1::::<><>::res://cursor.gd<>uid://cxpcv1ic88r0n::::res://sprites/курсор.png
+floating_text.gd::GDScript::-1::1735029633::0::1::::<>Node2D<>::
+floating_text.tscn::PackedScene::4585256725653548124::1735030242::0::1::::<><>::res://Scenes/floating_text.gd
 hpBar.tscn::PackedScene::772722002743384270::1726897967::0::1::::<><>::uid://cwjndhtm0nme7::::res://sprites/здоровье/хпбарпуст.png<>uid://dq3edp7vs1rtc::::res://sprites/здоровье/хпбарфул.png<>res://Scripts/hp_bar.gd<>uid://jynd5c2xfwg2::::res://sprites/здоровье/злой здоровье.png<>uid://bucjwhwb6ros2::::res://sprites/здоровье/напряженный здоровье.png<>uid://jlqijsmridlv::::res://sprites/здоровье/веселый здоровье.png<>uid://rtrewhflg20i::::res://sprites/здоровье/тильт здоровье.png<>uid://cpglw1vo0b5kr::::res://Comic Sans MS Pixel.ttf<>res://Scripts/BarText.gd
 interectrive_text_control.tscn::PackedScene::8892093308542018779::1726897967::0::1::::<><>::uid://cpglw1vo0b5kr::::res://Comic Sans MS Pixel.ttf
-inventory_ui.gd::GDScript::-1::1735022874::0::1::::<>Control<>::
-inventory_ui.tscn::PackedScene::9203696314314408669::1735023618::0::1::::<><>::res://Scenes/inventory_ui.gd<>uid://c6ddmvlg1d3yv::::res://sprites/основнойслотик.png<>res://Scenes/Slot.gd<>uid://boq3set5w1kig::::res://Tyche.ttf
-MercLight.gd::GDScript::-1::1735022875::0::1::::<>PointLight2D<>::
+inventory_ui.gd::GDScript::-1::1735030227::0::1::::<>Control<>::
+inventory_ui.tscn::PackedScene::9203696314314408669::1735030241::0::1::::<><>::res://Scenes/inventory_ui.gd<>uid://c6ddmvlg1d3yv::::res://sprites/основнойслотик.png<>res://Scenes/Slot.gd<>uid://boq3set5w1kig::::res://Tyche.ttf
+MercLight.gd::GDScript::-1::1735030227::0::1::::<>PointLight2D<>::
 MercLight.tscn::PackedScene::6753319943452851358::1726897967::0::1::::<><>::uid://dbu0d5wfcui5b::::res://sprites/light.png<>res://Scenes/MercLight.gd
-player.tscn::PackedScene::7427993339812396273::1735023618::0::1::::<><>::uid://dab0q4jjycrna::::res://sprites/animations/player/анимация улетай.png<>res://Scripts/player.gd<>uid://sur3r1titjwt::::res://resources/playerStats.tres<>uid://cujm0iwyb0dvp::::res://sprites/animations/player/анимация падучесть.png<>uid://dgwbi881aeana::::res://sprites/animations/player/анимация стоит.png<>res://Scripts/resources/Inventory.gd<>res://Scripts/resources/InventorySlot.gd<>uid://b3xwjhvm3qrvw::::res://sprites/animations/player/анимация идет.png<>uid://c3fp8n6vawxo3::::res://sprites/animations/player/анимация прыгать или непонятно что.png<>uid://ckahlxc1itaoe::::res://sprites/анимациякопать.png<>res://camera.gd<>uid://dqsv0dmogi1fw::::res://sprites/прицел.png<>uid://g13lamjxcx54::::res://sprites/анимация плыву.png<>uid://ca33a7dqfi0ad::::res://Заглавная (Игрушечное Веселье).mp3
-projectile_rock.gd::GDScript::-1::1735022875::0::1::::<>RigidBody2D<>::
-projectile_rock.tscn::PackedScene::1486111786166056655::1735023619::0::1::::<><>::res://Scenes/projectile_rock.gd<>uid://c03miwkbxoxrd::::res://sprites/булыга.png
-rock_pic.gd::GDScript::-1::1735022875::0::1::::<>CharacterBody2D<>::
-rock_pic.tscn::PackedScene::4362759934190632199::1735023618::0::1::::<><>::uid://c03miwkbxoxrd::::res://sprites/булыга.png<>res://Scenes/rock_pic.gd<>res://Scripts/collectable.gd<>uid://bvo7wmncj7ywq::::res://resources/items/rock.tres
-slime.tscn::PackedScene::6728332950469191347::1726897968::0::1::::<><>::res://slime.gd<>uid://cb242ymmuoofb::::res://sprites/animations/slime/сплайн появляется-sheet.png<>uid://b8he7ji2kwtpy::::res://resources/cummon_slime.tres<>uid://b2bf1b7eumcyq::::res://sprites/animations/slime/сплайн прощается-sheet.png<>uid://cnq2ohcspalwd::::res://sprites/animations/slime/лютый слайм.png
-Slot.gd::GDScript::-1::1735022875::0::1::::<>Panel<>::
+player.tscn::PackedScene::7427993339812396273::1735030241::0::1::::<><>::uid://dab0q4jjycrna::::res://sprites/animations/player/анимация улетай.png<>res://Scripts/player.gd<>uid://sur3r1titjwt::::res://resources/playerStats.tres<>uid://cujm0iwyb0dvp::::res://sprites/animations/player/анимация падучесть.png<>uid://dgwbi881aeana::::res://sprites/animations/player/анимация стоит.png<>res://Scripts/resources/Inventory.gd<>res://Scripts/resources/InventorySlot.gd<>uid://b3xwjhvm3qrvw::::res://sprites/animations/player/анимация идет.png<>uid://c3fp8n6vawxo3::::res://sprites/animations/player/анимация прыгать или непонятно что.png<>uid://ckahlxc1itaoe::::res://sprites/анимациякопать.png<>res://camera.gd<>uid://dqsv0dmogi1fw::::res://sprites/прицел.png<>uid://g13lamjxcx54::::res://sprites/анимация плыву.png<>uid://ca33a7dqfi0ad::::res://Заглавная (Игрушечное Веселье).mp3
+projectile_rock.gd::GDScript::-1::1735030228::0::1::::<>RigidBody2D<>::
+projectile_rock.tscn::PackedScene::1486111786166056655::1735030243::0::1::::<><>::res://Scenes/projectile_rock.gd<>uid://c03miwkbxoxrd::::res://sprites/булыга.png
+rock_pic.gd::GDScript::-1::1735030228::0::1::::<>CharacterBody2D<>::
+rock_pic.tscn::PackedScene::4362759934190632199::1735030241::0::1::::<><>::uid://c03miwkbxoxrd::::res://sprites/булыга.png<>res://Scenes/rock_pic.gd<>res://Scripts/collectable.gd<>uid://bvo7wmncj7ywq::::res://resources/items/rock.tres
+slime.tscn::PackedScene::6728332950469191347::1735030243::0::1::::<><>::res://slime.gd<>uid://cb242ymmuoofb::::res://sprites/animations/slime/сплайн появляется-sheet.png<>uid://b8he7ji2kwtpy::::res://resources/cummon_slime.tres<>uid://b2bf1b7eumcyq::::res://sprites/animations/slime/сплайн прощается-sheet.png<>uid://cnq2ohcspalwd::::res://sprites/animations/slime/лютый слайм.png
+Slot.gd::GDScript::-1::1735030228::0::1::::<>Panel<>::
 texture_rect.tscn::PackedScene::5850525988897133084::1726897968::0::1::::<><>::uid://c6ddmvlg1d3yv::::res://sprites/основнойслотик.png
-wagon1.tscn::PackedScene::7700462053056731337::1735023618::0::1::::<><>::uid://kgm2f5ox0i0c::::res://sprites/караваны.png<>res://Scenes/wagon_1.gd<>uid://c3hmgs4wutl2e::::res://Scenes/MercLight.tscn<>uid://o33tsick6wmu::::res://sprites/закрывание фургона.png<>uid://d3eu12yrgq8dy::::res://sprites/открывание фургона.png
-wagon2.tscn::PackedScene::7685982994044088471::1735023618::0::1::::<><>::res://Scenes/wagon_2.gd<>uid://kgm2f5ox0i0c::::res://sprites/караваны.png<>uid://c3hmgs4wutl2e::::res://Scenes/MercLight.tscn
-wagon_1.gd::GDScript::-1::1735022875::0::1::::<>Area2D<>::
-wagon_2.gd::GDScript::-1::1735022875::0::1::::<>Area2D<>::
-::res://Scripts/::1735022875
-BarText.gd::GDScript::-1::1735022873::0::1::::<>Label<>::
-collectable.gd::GDScript::-1::1735022873::0::1::::<>Node<>::
-DamagePopUp.gd::GDScript::-1::1735022874::0::1::::<>Node<>::
+wagon1.tscn::PackedScene::7700462053056731337::1735030241::0::1::::<><>::uid://kgm2f5ox0i0c::::res://sprites/караваны.png<>res://Scenes/wagon_1.gd<>uid://c3hmgs4wutl2e::::res://Scenes/MercLight.tscn<>uid://o33tsick6wmu::::res://sprites/закрывание фургона.png<>uid://d3eu12yrgq8dy::::res://sprites/открывание фургона.png
+wagon2.tscn::PackedScene::7685982994044088471::1735030242::0::1::::<><>::res://Scenes/wagon_2.gd<>uid://kgm2f5ox0i0c::::res://sprites/караваны.png<>uid://c3hmgs4wutl2e::::res://Scenes/MercLight.tscn
+wagon_1.gd::GDScript::-1::1735030228::0::1::::<>Area2D<>::
+wagon_2.gd::GDScript::-1::1735030229::0::1::::<>Area2D<>::
+::res://Scripts/::1735030227
+BarText.gd::GDScript::-1::1735030226::0::1::::<>Label<>::
+collectable.gd::GDScript::-1::1735030226::0::1::::<>Node<>::
+DamagePopUp.gd::GDScript::-1::1735030226::0::1::::<>Node<>::
 hp_bar.gd::GDScript::-1::1726897968::0::1::::<>TextureProgressBar<>::
-player.gd::GDScript::-1::1735022875::0::1::::Player<>CharacterBody2D<>::
-::res://Scripts/resources/::1735022874
-enemyStats.gd::GDScript::-1::1735021156::0::1::::EnemyStats<>Resource<>::
-Inventory.gd::GDScript::-1::1735022874::0::1::::Inventory<>Resource<>::
-InventorySlot.gd::GDScript::-1::1735022874::0::1::::InventorySlot<>Resource<>::
-InvItem.gd::GDScript::-1::1735022874::0::1::::InvItem<>Resource<>::
+player.gd::GDScript::-1::1735030227::0::1::::Player<>CharacterBody2D<>::
+::res://Scripts/resources/::1735030227
+enemyStats.gd::GDScript::-1::1735029131::0::1::::EnemyStats<>Resource<>::
+Inventory.gd::GDScript::-1::1735030227::0::1::::Inventory<>Resource<>::
+InventorySlot.gd::GDScript::-1::1735030227::0::1::::InventorySlot<>Resource<>::
+InvItem.gd::GDScript::-1::1735030227::0::1::::InvItem<>Resource<>::
 PlayerStats.gd::GDScript::-1::1726897968::0::1::::PlayerStats<>Resource<>::
 ::res://sprites/::1728060643
 corovansEx.png::CompressedTexture2D::2006257944773293957::1726897968::1727268298::1::::<><>::

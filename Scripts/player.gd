@@ -1,23 +1,32 @@
+# Основной класс игрока, управляющий движением, инвентарем и взаимодействием с миром
 extends CharacterBody2D
 class_name Player
 
-
+# Параметры статистики и компонентов
 @export var stats : PlayerStats
 @onready var animator = $AnimatedSprite2D
 @onready var hpBar : TextureProgressBar = get_node("%HpBar")
 @onready var airBar : TextureProgressBar = get_node("%AirBar")
 @export var fallDamageMultyply : float = 1
+
+# Параметры падения
 var fall_height : int = 0
 var danger_height : int = 8
+
+# Параметры инвентаря и состояния
 var selected_slot = 0
 @onready var maxHp : int = stats.maxhp
 @onready var hp : int = maxHp
 @onready var maxAir : int = stats.max_air
 @onready var air : int = maxHp
+
+# Компоненты и ссылки
 @onready var crosshair : Sprite2D = $Crosshair
 @onready var digRaycast : RayCast2D = $Raycasts/DigRaycast
 @onready var groundTiles : TileMapLayer = %GroundTiles
 @export var inventory : Inventory
+
+# Флаги состояния
 var is_digging : bool = false
 var can_animate : bool = true
 var can_move : bool = true
@@ -25,6 +34,8 @@ var is_in_water : bool = false
 var is_alive : bool = true
 var is_falling : bool = false
 var direction
+
+# Система броска камней
 @onready var ProjectileRock = preload("res://Scenes/projectile_rock.tscn")
 var is_aiming = false
 var throw_power = 0
@@ -68,10 +79,12 @@ func _physics_process(delta: float) -> void:
 
 
 func _process(delta: float) -> void:
+	# Обновление UI
 	hpBar.value = hp
 	airBar.value = air
+	
 	if is_alive:
-		
+		# Обработка инвентаря
 		if Input.is_action_just_pressed("ui_cancel"):
 			inventory.RemoveItem(selected_slot)
 		if Input.is_action_just_pressed("ScrollUp"):
@@ -82,10 +95,12 @@ func _process(delta: float) -> void:
 			selected_slot = selected_slot - 1
 			if selected_slot > 3:
 				selected_slot = 3
+				
 		if can_move:
 			HandlerAnimation()
 			check_tile()
 			
+			# Система падения и урона от падения
 			if !is_on_floor():
 				if velocity.y > 0:
 					fall_height += velocity.y * delta
@@ -95,7 +110,8 @@ func _process(delta: float) -> void:
 					ApplyFallDamage()
 			is_falling = true if (fall_height / 32) + 1 >= danger_height else false
 		
-		if is_in_water  and !$Raycasts/RayCast2D.is_colliding():
+		# Система дыхания под водой
+		if is_in_water and !$Raycasts/RayCast2D.is_colliding():
 			fall_height = 0
 			air -= 10 * delta
 		elif !is_in_water:
@@ -110,10 +126,10 @@ func _process(delta: float) -> void:
 		else:
 			$Timers/Timer.stop()
 
+		# Система прицеливания
 		if is_aiming:
 			crosshair.position = (position - get_global_mouse_position()).normalized() * -40
 			crosshair.visible = true
-			# Увеличиваем силу броска пока зажата кнопка
 			throw_power = min(throw_power + 400 * delta, max_throw_power)
 		else:
 			crosshair.visible = false
@@ -121,23 +137,31 @@ func _process(delta: float) -> void:
 
 
 func _input(event: InputEvent) -> void:
+	# Копание
 	if Input.is_action_pressed("use"):
 		animator.play("dig")
+	# Прыжок
 	if Input.is_action_just_pressed("jump") and is_on_floor() and !is_in_water:
 		velocity.y = stats.jump_force
 
+	# Перезагрузка сцены
 	if Input.is_key_pressed(KEY_R):
 		get_tree().reload_current_scene()
 		for i in range(inventory.slots.size()):
 			inventory.slots[i] == null
 		inventory.update.emit()
+		
+	# Система разрушения блоков
 	if Input.is_action_just_pressed("lbm"):
 		var cellPos = groundTiles.local_to_map(get_global_mouse_position())
 		if cellPos != null and !is_digging:
 			is_digging = true
+			# Определение области копания
 			var point_a = Vector2i(groundTiles.local_to_map(position)) + Vector2i(-1,-1)
 			var point_b = Vector2i(groundTiles.local_to_map(position)) + Vector2i(1,1)
 			var cellData : TileData = groundTiles.get_cell_tile_data(cellPos)
+			
+			# Проверка возможности копания и обработка прочности блока
 			if (cellData != null) and (is_close_to_dig(point_a,point_b,cellPos)):
 				if cellData.get_custom_data("durability") != null:
 					var cellHp = cellData.get_custom_data("durability")
@@ -182,11 +206,12 @@ func HandlerAnimation():
 
 
 func check_tile():
-	var FluidTilemap : TileMapLayer = get_node("%FluidTiles")  # Убедитесь, что путь к TileMap правильный
+	var FluidTilemap : TileMapLayer = get_node("%FluidTiles")
 	if FluidTilemap:
 		var tile_pos = FluidTilemap.local_to_map(position)
 		var tile_id = FluidTilemap.get_cell_source_id(tile_pos)
 		
+		# Обработка взаимодействия с водой
 		if tile_id != -1:
 			var tile_data : TileData = FluidTilemap.get_cell_tile_data(tile_pos)
 			if tile_data.get_custom_data("name") == "water" and !is_in_water:
