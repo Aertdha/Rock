@@ -26,3 +26,19 @@ func RemoveItem(slot_index):
 
 func get_item(slot_index):
 	return slots[slot_index] if slot_index >= 0 and slot_index < slot_index.size() else null
+
+func has_item(item_name: String) -> bool:
+	for slot in slots:
+		if slot.item != null and slot.item.name == item_name and slot.amount > 0:
+			return true
+	return false
+
+func remove_item(item_name: String, amount: int = 1) -> bool:
+	for i in range(slots.size()):
+		if slots[i].item != null and slots[i].item.name == item_name and slots[i].amount >= amount:
+			slots[i].amount -= amount
+			if slots[i].amount <= 0:
+				slots[i].item = null
+			update.emit()
+			return true
+	return false

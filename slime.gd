@@ -9,12 +9,17 @@ var is_close : bool = false
 var is_on_floor : bool = true
 var is_in_jump = false
 var direction : Vector2 = Vector2.ZERO
+var health : int
+var can_attack_in_jump = true
 
 @export var buff : int = -200
 @export var stats : EnemyStats
 @onready var animator = $AnimatedSprite2D
 
+const FloatingText = preload("res://Scenes/floating_text.tscn")
+
 func _ready() -> void:
+	health = stats.max_health
 	animator.play_backwards("apeer")
 	animator.stop()
 	is_hiden = true
@@ -48,6 +53,7 @@ func _process(delta: float) -> void:
 
 func Jump():	
 	is_in_jump = true
+	can_attack_in_jump = true
 	linear_velocity = Vector2.ZERO
 	if (position.y - player.position.y) > 32 and (position.x - player.position.x) < 128:
 		apply_impulse(Vector2(stats.speed  * direction.x,stats.jump + buff))
@@ -75,9 +81,19 @@ func Dash():
 
 
 func DealDamage():
+	if is_in_jump and not can_attack_in_jump:
+		return
+	if not can_hit:
+		return
+	
 	player.TakeDamage(stats.damage)
 	player.KnockBack(stats.knockBack_str, direction)
 	can_hit = false
+	
+	if is_in_jump:
+		can_attack_in_jump = false
+	
+	$timers/TimeBetweenHit.wait_time = 1.0
 	$timers/TimeBetweenHit.start()
 
 	
@@ -142,3 +158,38 @@ func _on_hit_delay_timeout() -> void:
 func _on_time_between_hit_timeout() -> void:
 	can_hit = true
 #endregion
+
+func take_damage(damage: int) -> void:
+	if !is_hiden:
+		health -= damage
+		prints("Слизь получила урон:", damage, "Осталось HP:", health)
+		animator.play("run")
+		
+		# Создаем текст урона
+		var text = FloatingText.instantiate()
+		text.position = position
+		text.set_text(str(damage))
+		text.scale = Vector2(0.7, 0.7)
+		get_parent().add_child(text)
+		
+		if health <= 0:
+			die()
+		else:
+			var knockback_direction = (position - player.position).normalized()
+			apply_impulse(knockback_direction * 400)
+			apply_impulse(Vector2(0, -200))
+
+func die() -> void:
+	# Отключаем физику и коллизии
+	set_collision_layer_value(3, false)
+	set_collision_mask_value(2, false)
+	freeze = true  # Останавливаем физику
+	
+	# Проигрываем анимацию смерти
+	animator.play("death")  # Убедитесь, что анимация называется "death"
+	
+	# Ждем окончания анимации
+	await animator.animation_finished
+	
+	# Удаляем слизь
+	queue_free()

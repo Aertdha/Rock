@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://vf5bq4fpaw2r"]
+
+[ext_resource type="Script" path="res://Scenes/projectile_rock.gd" id="1_c4wpo"]
+[ext_resource type="Texture2D" uid="uid://c03miwkbxoxrd" path="res://sprites/булыга.png" id="2_3n6cr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sdnxo"]
+radius = 4.0
+
+[node name="RigidBody2D" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 5
+continuous_cd = 2
+contact_monitor = true
+max_contacts_reported = 4
+angular_damp = 1.0
+script = ExtResource("1_c4wpo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_3n6cr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_sdnxo")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

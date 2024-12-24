@@ -25,6 +25,11 @@ var is_in_water : bool = false
 var is_alive : bool = true
 var is_falling : bool = false
 var direction
+@onready var ProjectileRock = preload("res://Scenes/projectile_rock.tscn")
+var is_aiming = false
+var throw_power = 0
+var max_throw_power = 800
+var min_throw_power = 200
 
 func _ready() -> void:
 	hpBar.max_value = maxHp 
@@ -105,6 +110,15 @@ func _process(delta: float) -> void:
 		else:
 			$Timers/Timer.stop()
 
+		if is_aiming:
+			crosshair.position = (position - get_global_mouse_position()).normalized() * -40
+			crosshair.visible = true
+			# Увеличиваем силу броска пока зажата кнопка
+			throw_power = min(throw_power + 400 * delta, max_throw_power)
+		else:
+			crosshair.visible = false
+			throw_power = min_throw_power
+
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_pressed("use"):
@@ -117,11 +131,6 @@ func _input(event: InputEvent) -> void:
 		for i in range(inventory.slots.size()):
 			inventory.slots[i] == null
 		inventory.update.emit()
-	if Input.is_action_pressed("aim"):
-		crosshair.position = (position - get_global_mouse_position()).normalized() * -40
-		crosshair.visible = true
-	else:
-		crosshair.visible = false
 	if Input.is_action_just_pressed("lbm"):
 		var cellPos = groundTiles.local_to_map(get_global_mouse_position())
 		if cellPos != null and !is_digging:
@@ -240,3 +249,32 @@ func _on_collect_area_area_entered(area: Area2D) -> void:
 	if area.has_method("Collect"):
 		if inventory.slots:
 			area.Collect(inventory)
+
+func _unhandled_input(event):
+	if event.is_action_pressed("aim"):
+		prints("Aim pressed")
+		is_aiming = true
+	elif event.is_action_released("aim") and is_aiming:
+		prints("Aim released, throwing rock")
+		throw_rock()
+		is_aiming = false
+		throw_power = min_throw_power
+
+func throw_rock():
+	prints("Trying to throw rock...")
+	if inventory.has_item("rock"):
+		prints("Rock found in inventory")
+		var rock = ProjectileRock.instantiate()
+		get_parent().add_child(rock)
+		
+		var mouse_pos = get_global_mouse_position()
+		prints("Mouse position:", mouse_pos)
+		prints("Player position:", global_position)
+		var direction = (mouse_pos - global_position).normalized()
+		
+		prints("Throwing rock with power: ", throw_power)
+		rock.initial_velocity = throw_power
+		rock.launch(direction, global_position)
+		inventory.remove_item("rock")
+	else:
+		prints("No rock in inventory")
