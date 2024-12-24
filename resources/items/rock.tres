@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://bvo7wmncj7ywq"]
+
+[ext_resource type="Script" path="res://Scripts/resources/InvItem.gd" id="1_5rih2"]
+[ext_resource type="Texture2D" uid="uid://c03miwkbxoxrd" path="res://sprites/булыга.png" id="2_ahn2t"]
+
+[resource]
+script = ExtResource("1_5rih2")
+name = "rock"
+texture = ExtResource("2_ahn2t")
+maxStuck = 4

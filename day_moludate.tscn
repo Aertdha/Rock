@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cghchyso4xvgr"]
+
+[ext_resource type="Script" path="res://DayCycle.gd" id="1_6vkwx"]
+[ext_resource type="Texture2D" uid="uid://05ow5q6x4q0e" path="res://gradient.tres" id="2_fagul"]
+
+[node name="DayMoludate" type="CanvasModulate"]
+color = Color(0.574951, 0.306641, 0.613281, 1)
+script = ExtResource("1_6vkwx")
+gradient = ExtResource("2_fagul")
+INGAME_SPEED = 20
+INIT_HOUR = 0

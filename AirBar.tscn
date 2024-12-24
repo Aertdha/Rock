@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://u3xpae4g64y3"]
+
+[ext_resource type="Texture2D" uid="uid://ckaq0qjdekaue" path="res://sprites/водабарпуст.png" id="1_sw8da"]
+[ext_resource type="Texture2D" uid="uid://dosbaiqmtkumu" path="res://sprites/водабарфул.png" id="2_e272l"]
+[ext_resource type="FontFile" uid="uid://cpglw1vo0b5kr" path="res://Comic Sans MS Pixel.ttf" id="3_cti6d"]
+[ext_resource type="Script" path="res://Scripts/BarText.gd" id="3_kf2uu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hlvxn"]
+font = ExtResource("3_cti6d")
+font_size = 24
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[node name="AirBar" type="TextureProgressBar"]
+anchors_preset = -1
+anchor_right = 0.031
+anchor_bottom = 0.167
+offset_right = 0.0799999
+offset_bottom = -0.0600014
+value = 50.0
+fill_mode = 3
+texture_over = ExtResource("1_sw8da")
+texture_progress = ExtResource("2_e272l")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.2
+anchor_top = -0.167
+anchor_right = 1.14
+anchor_bottom = -0.013
+offset_left = 1.0
+offset_top = 0.00999975
+offset_right = 49.6
+offset_bottom = 18.39
+scale = Vector2(0.2, 0.2)
+text = "100/100"
+label_settings = SubResource("LabelSettings_hlvxn")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_kf2uu")

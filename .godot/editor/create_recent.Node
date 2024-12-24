@@ -1,0 +1,14 @@
+CollisionShape2D
+Area2D
+RayCast2D
+Sprite2D
+Panel
+AnimatedSprite2D
+Node2D
+VBoxContainer
+HBoxContainer
+PointLight2D
+CharacterBody2D
+StaticBody2D
+CPUParticles2D
+GPUParticles2D

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpmbkqmbcn78s"]
+
+[ext_resource type="Texture2D" uid="uid://c6ddmvlg1d3yv" path="res://sprites/основнойслотик.png" id="1_33wpw"]
+
+[node name="TextureRect" type="TextureRect"]
+anchors_preset = -1
+anchor_right = 0.1
+anchor_bottom = 0.178
+offset_bottom = -0.0400009
+texture = ExtResource("1_33wpw")

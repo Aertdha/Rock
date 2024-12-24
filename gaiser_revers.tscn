@@ -1,0 +1,71 @@
+[gd_scene load_steps=9 format=3 uid="uid://cf5pv1rrf3rq7"]
+
+[ext_resource type="Script" path="res://gaiser.gd" id="1_phm24"]
+[ext_resource type="Texture2D" uid="uid://dlbrtra35kfai" path="res://sprites/всасыватель.png" id="2_0hus1"]
+[ext_resource type="Texture2D" uid="uid://dn7qklms810gu" path="res://sprites/дымооок.png" id="3_ebio4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pm1t3"]
+size = Vector2(32, 27)
+
+[sub_resource type="Gradient" id="Gradient_stpen"]
+offsets = PackedFloat32Array(0.08, 0.693333, 0.92)
+colors = PackedColorArray(1, 1, 1, 0.0705882, 1, 1, 1, 0.270588, 1, 1, 1, 0)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bvh0h"]
+load_path = "res://.godot/imported/дымооок.png-8447d5f2627b722730855247a7392922.ctex"
+
+[sub_resource type="Gradient" id="Gradient_7icmi"]
+offsets = PackedFloat32Array(0.08, 0.5, 0.92)
+colors = PackedColorArray(1, 1, 1, 0.0431373, 1, 1, 1, 0.0980392, 1, 1, 1, 0.223529)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h0re8"]
+size = Vector2(32, 284)
+
+[node name="gaiser" type="StaticBody2D"]
+script = ExtResource("1_phm24")
+revers = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_0hus1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 18.5)
+shape = SubResource("RectangleShape2D_pm1t3")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(0, -219)
+amount = 50
+lifetime = 2.0
+texture = ExtResource("3_ebio4")
+emission_shape = 1
+emission_sphere_radius = 0.01
+gravity = Vector2(0, 100)
+angular_velocity_min = -362.18
+angular_velocity_max = 720.0
+scale_amount_min = 0.07
+scale_amount_max = 0.1
+color_ramp = SubResource("Gradient_stpen")
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
+z_index = 10
+position = Vector2(0, -219)
+amount = 50
+lifetime = 2.0
+texture = SubResource("CompressedTexture2D_bvh0h")
+emission_shape = 1
+emission_sphere_radius = 0.01
+gravity = Vector2(0, 100)
+angular_velocity_min = -362.18
+angular_velocity_max = 720.0
+scale_amount_min = 0.07
+scale_amount_max = 0.1
+color_ramp = SubResource("Gradient_7icmi")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -78.5)
+shape = SubResource("RectangleShape2D_h0re8")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

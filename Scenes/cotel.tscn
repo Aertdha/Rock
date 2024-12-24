@@ -1,0 +1,98 @@
+[gd_scene load_steps=14 format=3 uid="uid://bv2mprjoomcqj"]
+
+[ext_resource type="Texture2D" uid="uid://brbvyy7chjox0" path="res://sprites/котел1левел.png" id="1_kxsoq"]
+[ext_resource type="PackedScene" uid="uid://c3hmgs4wutl2e" path="res://Scenes/MercLight.tscn" id="2_lkjlx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pise8"]
+atlas = ExtResource("1_kxsoq")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_shjqa"]
+atlas = ExtResource("1_kxsoq")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rs1pg"]
+atlas = ExtResource("1_kxsoq")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fwg78"]
+atlas = ExtResource("1_kxsoq")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5xae8"]
+atlas = ExtResource("1_kxsoq")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_85fjv"]
+atlas = ExtResource("1_kxsoq")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ctao"]
+atlas = ExtResource("1_kxsoq")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jho1i"]
+atlas = ExtResource("1_kxsoq")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ab8j"]
+atlas = ExtResource("1_kxsoq")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wihij"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pise8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_shjqa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rs1pg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fwg78")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5xae8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_85fjv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ctao")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jho1i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ab8j")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_25cr1"]
+size = Vector2(26, 19)
+
+[node name="StaticBody2D" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wihij")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.534108
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_25cr1")
+
+[node name="PointLight2D" parent="." instance=ExtResource("2_lkjlx")]
+position = Vector2(0, 4)
+color = Color(0.260663, 1, 0.177086, 1)
+energy = 0.8
+texture_scale = 2.0
+speed = 10.0
+str = 0.1

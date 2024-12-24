@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3hmgs4wutl2e"]
+
+[ext_resource type="Texture2D" uid="uid://dbu0d5wfcui5b" path="res://sprites/light.png" id="1_6xppr"]
+[ext_resource type="Script" path="res://Scenes/MercLight.gd" id="2_ola0j"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_thxm3"]
+noise_type = 0
+
+[node name="PointLight2D" type="PointLight2D"]
+position = Vector2(53.5, -0.499998)
+scale = Vector2(1.85938, 1.85938)
+color = Color(1, 0.582114, 0.177086, 1)
+texture = ExtResource("1_6xppr")
+script = ExtResource("2_ola0j")
+noise = SubResource("FastNoiseLite_thxm3")

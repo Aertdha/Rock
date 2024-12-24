@@ -1,0 +1,261 @@
+[gd_scene load_steps=34 format=3 uid="uid://dhyfqqu7r3l6p"]
+
+[ext_resource type="Texture2D" uid="uid://kgm2f5ox0i0c" path="res://sprites/караваны.png" id="1_2absp"]
+[ext_resource type="Script" path="res://Scenes/wagon_1.gd" id="1_b8jl8"]
+[ext_resource type="PackedScene" uid="uid://c3hmgs4wutl2e" path="res://Scenes/MercLight.tscn" id="2_iedyi"]
+[ext_resource type="Texture2D" uid="uid://o33tsick6wmu" path="res://sprites/закрывание фургона.png" id="4_ndhl4"]
+[ext_resource type="Texture2D" uid="uid://d3eu12yrgq8dy" path="res://sprites/открывание фургона.png" id="5_uulwm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fwb4o"]
+atlas = ExtResource("1_2absp")
+region = Rect2(96, 0, 112, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vb4se"]
+atlas = ExtResource("1_2absp")
+region = Rect2(96, 50, 112, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fcbjd"]
+size = Vector2(35, 28)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4q6kx"]
+load_path = "res://.godot/imported/хайп.png-f26afc5b3aa8ae7c5f71f3b3a74a24ba.ctex"
+
+[sub_resource type="Curve" id="Curve_mlnsc"]
+min_value = 0.5
+max_value = 2.0
+_data = [Vector2(0, 0.5), 0.0, 1.5, 0, 1, Vector2(1, 2), 1.5, 0.0, 1, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_gmm1v"]
+offsets = PackedFloat32Array(0, 0.213333, 0.44)
+colors = PackedColorArray(0.407843, 0.407843, 0.407843, 0.290196, 0.1875, 0.1875, 0.1875, 0.233333, 0, 0, 0, 0)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_avprq"]
+load_path = "res://.godot/imported/хайп.png-f26afc5b3aa8ae7c5f71f3b3a74a24ba.ctex"
+
+[sub_resource type="Curve" id="Curve_ivokh"]
+min_value = 0.5
+max_value = 2.0
+_data = [Vector2(0, 0.5), 0.0, 1.5, 0, 1, Vector2(1, 2), 1.5, 0.0, 1, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_wf3v6"]
+offsets = PackedFloat32Array(0, 0.0666667, 0.14)
+colors = PackedColorArray(0.407843, 0.407843, 0.407843, 0.290196, 0.1875, 0.1875, 0.1875, 0.233333, 0, 0, 0, 0)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nm5dt"]
+load_path = "res://.godot/imported/хайп.png-f26afc5b3aa8ae7c5f71f3b3a74a24ba.ctex"
+
+[sub_resource type="Curve" id="Curve_rcndy"]
+min_value = 0.5
+max_value = 2.0
+_data = [Vector2(0, 0.5), 0.0, 1.5, 0, 1, Vector2(1, 2), 1.5, 0.0, 1, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_kiwms"]
+offsets = PackedFloat32Array(0, 0.146667, 0.286667)
+colors = PackedColorArray(0.407843, 0.407843, 0.407843, 0.290196, 0.1875, 0.1875, 0.1875, 0.233333, 0, 0, 0, 0)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_f71mq"]
+load_path = "res://.godot/imported/хайп.png-f26afc5b3aa8ae7c5f71f3b3a74a24ba.ctex"
+
+[sub_resource type="Curve" id="Curve_8dcty"]
+min_value = 0.5
+max_value = 2.0
+_data = [Vector2(0, 0.5), 0.0, 1.5, 0, 1, Vector2(1, 2), 1.5, 0.0, 1, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_4ssey"]
+offsets = PackedFloat32Array(0, 0.08, 0.173333)
+colors = PackedColorArray(0.407843, 0.407843, 0.407843, 0.290196, 0.1875, 0.1875, 0.1875, 0.233333, 0, 0, 0, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hsijn"]
+atlas = ExtResource("4_ndhl4")
+region = Rect2(0, 0, 128, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jkayf"]
+atlas = ExtResource("4_ndhl4")
+region = Rect2(128, 0, 128, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0u5es"]
+atlas = ExtResource("4_ndhl4")
+region = Rect2(256, 0, 128, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8j85"]
+atlas = ExtResource("4_ndhl4")
+region = Rect2(384, 0, 128, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dwoei"]
+atlas = ExtResource("4_ndhl4")
+region = Rect2(512, 0, 128, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y6xxa"]
+atlas = ExtResource("4_ndhl4")
+region = Rect2(640, 0, 128, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lyh02"]
+atlas = ExtResource("5_uulwm")
+region = Rect2(0, 0, 128, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38wbn"]
+atlas = ExtResource("5_uulwm")
+region = Rect2(128, 0, 128, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3w8w5"]
+atlas = ExtResource("5_uulwm")
+region = Rect2(256, 0, 128, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3yvh"]
+atlas = ExtResource("5_uulwm")
+region = Rect2(384, 0, 128, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_32jn2"]
+atlas = ExtResource("5_uulwm")
+region = Rect2(512, 0, 128, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bg41a"]
+atlas = ExtResource("5_uulwm")
+region = Rect2(640, 0, 128, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xjrfh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hsijn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jkayf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0u5es")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y8j85")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dwoei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y6xxa")
+}],
+"loop": false,
+"name": &"close",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lyh02")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38wbn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3w8w5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v3yvh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_32jn2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bg41a")
+}],
+"loop": false,
+"name": &"open",
+"speed": 8.0
+}]
+
+[node name="Area2D" type="Area2D"]
+scale = Vector2(2, 2)
+collision_layer = 16
+collision_mask = 2
+script = ExtResource("1_b8jl8")
+
+[node name="noMan" type="Sprite2D" parent="."]
+visible = false
+texture = SubResource("AtlasTexture_fwb4o")
+
+[node name="man" type="Sprite2D" parent="."]
+visible = false
+texture = SubResource("AtlasTexture_vb4se")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, 2)
+shape = SubResource("RectangleShape2D_fcbjd")
+
+[node name="lights" type="Node2D" parent="."]
+position = Vector2(-1.5, -11)
+scale = Vector2(1.85938, 1.85938)
+
+[node name="PointLight2D" parent="lights" instance=ExtResource("2_iedyi")]
+position = Vector2(29.5798, 5.64704)
+scale = Vector2(1, 1)
+energy = 1.2
+speed = 10.0
+
+[node name="PointLight2D2" parent="lights" instance=ExtResource("2_iedyi")]
+position = Vector2(0, 0)
+scale = Vector2(1, 1)
+energy = 2.0
+speed = 10.0
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+light_mask = 0
+z_index = -1
+position = Vector2(40, -5.5)
+amount = 1
+lifetime = 2.0
+speed_scale = 0.5
+texture = SubResource("CompressedTexture2D_4q6kx")
+gravity = Vector2(0, -100)
+scale_amount_min = 0.25
+scale_amount_max = 0.5
+scale_amount_curve = SubResource("Curve_mlnsc")
+color_ramp = SubResource("Gradient_gmm1v")
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
+light_mask = 0
+z_index = -1
+position = Vector2(25, -9)
+amount = 1
+lifetime = 6.0
+speed_scale = 0.5
+texture = SubResource("CompressedTexture2D_avprq")
+gravity = Vector2(0, -100)
+scale_amount_min = 0.25
+scale_amount_max = 0.5
+scale_amount_curve = SubResource("Curve_ivokh")
+color_ramp = SubResource("Gradient_wf3v6")
+
+[node name="CPUParticles2D3" type="CPUParticles2D" parent="."]
+light_mask = 0
+z_index = -1
+position = Vector2(19, -8.5)
+amount = 1
+lifetime = 2.5
+speed_scale = 0.5
+texture = SubResource("CompressedTexture2D_nm5dt")
+gravity = Vector2(0, -100)
+scale_amount_min = 0.25
+scale_amount_max = 0.5
+scale_amount_curve = SubResource("Curve_rcndy")
+color_ramp = SubResource("Gradient_kiwms")
+
+[node name="CPUParticles2D4" type="CPUParticles2D" parent="."]
+light_mask = 0
+z_index = -1
+position = Vector2(13.5, -8)
+amount = 1
+lifetime = 4.0
+speed_scale = 0.5
+texture = SubResource("CompressedTexture2D_f71mq")
+gravity = Vector2(0, -100)
+scale_amount_min = 0.25
+scale_amount_max = 0.5
+scale_amount_curve = SubResource("Curve_8dcty")
+color_ramp = SubResource("Gradient_4ssey")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_xjrfh")
+animation = &"close"

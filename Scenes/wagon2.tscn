@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://dhrfatvhj2yuh"]
+
+[ext_resource type="Script" path="res://Scenes/wagon_2.gd" id="1_1x3le"]
+[ext_resource type="Texture2D" uid="uid://kgm2f5ox0i0c" path="res://sprites/караваны.png" id="2_hm68e"]
+[ext_resource type="PackedScene" uid="uid://c3hmgs4wutl2e" path="res://Scenes/MercLight.tscn" id="3_q2s3s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d5pot"]
+atlas = ExtResource("2_hm68e")
+region = Rect2(0, 0, 47, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fcbjd"]
+size = Vector2(35, 28)
+
+[node name="Area2D" type="Area2D"]
+scale = Vector2(2, 2)
+collision_layer = 16
+collision_mask = 2
+script = ExtResource("1_1x3le")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.5, 2)
+texture = SubResource("AtlasTexture_d5pot")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, 9.5)
+shape = SubResource("RectangleShape2D_fcbjd")
+
+[node name="TextPos" type="Marker2D" parent="."]
+position = Vector2(0, 9.5)
+
+[node name="lights" type="Node2D" parent="."]
+
+[node name="PointLight2D" parent="lights" instance=ExtResource("3_q2s3s")]
+position = Vector2(20.5, 9)
+scale = Vector2(1.4375, 1.4375)
+speed = 10.0
+
+[node name="PointLight2D2" parent="lights" instance=ExtResource("3_q2s3s")]
+position = Vector2(-22.5, 9.5)
+scale = Vector2(1.4375, 1.4375)
+speed = 10.0
+str = 0.5
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://brxkwgovey2q1"]
+
+[ext_resource type="Script" path="res://inventoryRound.gd" id="1_jjt73"]
+[ext_resource type="PackedScene" uid="uid://cpmbkqmbcn78s" path="res://Scenes/texture_rect.tscn" id="2_6tqvc"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 3
+anchor_left = -0.094
+anchor_top = -0.167
+offset_left = 0.0800018
+offset_top = 0.0600014
+offset_right = 47.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 3.14159
+pivot_offset = Vector2(65, 65)
+script = ExtResource("1_jjt73")
+item_scene = ExtResource("2_6tqvc")
+item_count = 4
+radius = 25.0

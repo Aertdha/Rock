@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PlayerStats" load_steps=2 format=3 uid="uid://sur3r1titjwt"]
+
+[ext_resource type="Script" path="res://Scripts/resources/PlayerStats.gd" id="1_rdifx"]
+
+[resource]
+script = ExtResource("1_rdifx")
+speed = 200
+jump_force = -400
+maxhp = 100
+swim_speed = 100
+swim_jump = -100
+swim_gravity = 100
+max_air = 100
+airLossDamage = 10

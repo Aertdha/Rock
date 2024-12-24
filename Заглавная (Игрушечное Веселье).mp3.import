@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ca33a7dqfi0ad"
+path="res://.godot/imported/Заглавная (Игрушечное Веселье).mp3-381eeb3fbe28c3de2b306dd70d3d0664.mp3str"
+
+[deps]
+
+source_file="res://Заглавная (Игрушечное Веселье).mp3"
+dest_files=["res://.godot/imported/Заглавная (Игрушечное Веселье).mp3-381eeb3fbe28c3de2b306dd70d3d0664.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

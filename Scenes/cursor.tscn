@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://byb41gitrfd6s"]
+
+[ext_resource type="Script" path="res://cursor.gd" id="1_iiou4"]
+[ext_resource type="Texture2D" uid="uid://cxpcv1ic88r0n" path="res://sprites/курсор.png" id="2_rllb4"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_iiou4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.664063, 0.653687, 0.653687, 1)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_rllb4")

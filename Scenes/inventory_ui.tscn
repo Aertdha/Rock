@@ -1,0 +1,161 @@
+[gd_scene load_steps=7 format=3 uid="uid://d4else4nqlepx"]
+
+[ext_resource type="Script" path="res://Scenes/inventory_ui.gd" id="1_4nxus"]
+[ext_resource type="Texture2D" uid="uid://c6ddmvlg1d3yv" path="res://sprites/основнойслотик.png" id="1_8inhc"]
+[ext_resource type="Script" path="res://Scenes/Slot.gd" id="2_pqsgq"]
+[ext_resource type="FontFile" uid="uid://boq3set5w1kig" path="res://Tyche.ttf" id="4_nj8j8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ru18i"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ngh5y"]
+font = ExtResource("4_nj8j8")
+font_size = 23
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer"]
+offset_bottom = 35.0
+script = ExtResource("1_4nxus")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="Panel" type="Panel" parent="HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ru18i")
+script = ExtResource("2_pqsgq")
+
+[node name="SlotTexture" type="Sprite2D" parent="HBoxContainer/Panel"]
+texture = ExtResource("1_8inhc")
+centered = false
+
+[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer/Panel"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 32.0
+
+[node name="ItemTexture" type="Sprite2D" parent="HBoxContainer/Panel/CenterContainer"]
+centered = false
+
+[node name="Label" type="Label" parent="HBoxContainer/Panel"]
+layout_mode = 2
+offset_left = 12.0
+offset_top = 20.0
+offset_right = 42.0
+offset_bottom = 44.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+text = "0"
+label_settings = SubResource("LabelSettings_ngh5y")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Panel2" type="Panel" parent="HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ru18i")
+script = ExtResource("2_pqsgq")
+
+[node name="SlotTexture" type="Sprite2D" parent="HBoxContainer/Panel2"]
+texture = ExtResource("1_8inhc")
+centered = false
+
+[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer/Panel2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 32.0
+
+[node name="ItemTexture" type="Sprite2D" parent="HBoxContainer/Panel2/CenterContainer"]
+centered = false
+
+[node name="Label" type="Label" parent="HBoxContainer/Panel2"]
+layout_mode = 2
+offset_left = 12.0
+offset_top = 20.0
+offset_right = 42.0
+offset_bottom = 44.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+text = "0
+"
+label_settings = SubResource("LabelSettings_ngh5y")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="Panel3" type="Panel" parent="HBoxContainer2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ru18i")
+script = ExtResource("2_pqsgq")
+
+[node name="SlotTexture" type="Sprite2D" parent="HBoxContainer2/Panel3"]
+texture = ExtResource("1_8inhc")
+centered = false
+
+[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer2/Panel3"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 32.0
+
+[node name="ItemTexture" type="Sprite2D" parent="HBoxContainer2/Panel3/CenterContainer"]
+centered = false
+
+[node name="Label" type="Label" parent="HBoxContainer2/Panel3"]
+layout_mode = 2
+offset_left = 12.0
+offset_top = 20.0
+offset_right = 42.0
+offset_bottom = 44.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+text = "0
+"
+label_settings = SubResource("LabelSettings_ngh5y")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Panel4" type="Panel" parent="HBoxContainer2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ru18i")
+script = ExtResource("2_pqsgq")
+
+[node name="SlotTexture" type="Sprite2D" parent="HBoxContainer2/Panel4"]
+texture = ExtResource("1_8inhc")
+centered = false
+
+[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer2/Panel4"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 32.0
+
+[node name="ItemTexture" type="Sprite2D" parent="HBoxContainer2/Panel4/CenterContainer"]
+centered = false
+
+[node name="Label" type="Label" parent="HBoxContainer2/Panel4"]
+layout_mode = 2
+offset_left = 12.0
+offset_top = 20.0
+offset_right = 42.0
+offset_bottom = 44.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+text = "0
+"
+label_settings = SubResource("LabelSettings_ngh5y")
+horizontal_alignment = 2
+vertical_alignment = 1

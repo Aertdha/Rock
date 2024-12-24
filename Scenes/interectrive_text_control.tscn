@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyxnqifgk8vvv"]
+
+[ext_resource type="FontFile" uid="uid://cpglw1vo0b5kr" path="res://Comic Sans MS Pixel.ttf" id="1_gw133"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1ubel"]
+font = ExtResource("1_gw133")
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[node name="interectriveTextControl" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="interactiveText" type="Label" parent="."]
+visible = false
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.4
+anchor_top = -0.3
+anchor_right = 0.412
+anchor_bottom = 0.312
+offset_left = 16.0
+offset_top = 12.0
+offset_right = 48.52
+offset_bottom = 36.52
+scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(16, 12)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "[E]
+грабить"
+label_settings = SubResource("LabelSettings_1ubel")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true

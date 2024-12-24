@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://b3fmavvlnsk76"]
+
+[ext_resource type="Texture2D" uid="uid://c03miwkbxoxrd" path="res://sprites/булыга.png" id="1_7v6un"]
+[ext_resource type="Script" path="res://Scenes/rock_pic.gd" id="1_na3j4"]
+[ext_resource type="Script" path="res://Scripts/collectable.gd" id="3_oprq1"]
+[ext_resource type="Resource" uid="uid://bvo7wmncj7ywq" path="res://resources/items/rock.tres" id="4_jsrkl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7by4c"]
+size = Vector2(12, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dvvcm"]
+size = Vector2(16, 10)
+
+[node name="Rock_pic" type="CharacterBody2D"]
+collision_layer = 4
+script = ExtResource("1_na3j4")
+
+[node name="Body" type="Sprite2D" parent="."]
+texture = ExtResource("1_7v6un")
+
+[node name="hitboxShape" type="CollisionShape2D" parent="."]
+position = Vector2(2, 0)
+shape = SubResource("RectangleShape2D_7by4c")
+
+[node name="CollectArea" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("3_oprq1")
+itemRes = ExtResource("4_jsrkl")
+
+[node name="CollectShape" type="CollisionShape2D" parent="CollectArea"]
+position = Vector2(2, 0)
+shape = SubResource("RectangleShape2D_dvvcm")
+
+[connection signal="body_entered" from="CollectArea" to="." method="_on_collect_area_body_entered"]

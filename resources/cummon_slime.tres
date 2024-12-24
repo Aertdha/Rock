@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EnemyStats" load_steps=2 format=3 uid="uid://b8he7ji2kwtpy"]
+
+[ext_resource type="Script" path="res://Scripts/resources/enemyStats.gd" id="1_utobd"]
+
+[resource]
+script = ExtResource("1_utobd")
+speed = 200
+jump = -210
+maxHp = 30
+damage = 10
+knockBack_str = Vector2(500, -150)
